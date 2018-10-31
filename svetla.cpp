@@ -34,7 +34,7 @@ void controlLights(headlightsMode mode) {
       analogWrite(headlights, 75);
       break;
     case DALKOVA:
-      analogWrite(headlights, 255);
+      analogWrite(headlights, 255); // 255 is maximum value
       break;
     default:
       analogWrite(headlights, 0);
@@ -49,7 +49,7 @@ void setupLights() {
   pinMode(rightBlinkr, OUTPUT);
 
   // Turn off all the lights
-  analogWrite(headlights, 0);
+  controlLights(VYPNUTO);
   analogWrite(leftBlinkr, 0);
   analogWrite(rightBlinkr, 0);
 }
