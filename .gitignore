@@ -5,3 +5,15 @@
 /Debug
 /.vs/Skoda100RC/v15
 /__vm
+
+\.vs/__vm/\.vsarduino\.h
+
+\.vs/__vm/Compile\.vmps\.xml
+
+\.vs/__vm/Configuration\.Release\.vmps\.xml
+
+\.vs/ProjectSettings\.json
+
+\.vs/slnx\.sqlite
+
+\.vs/VSWorkspaceState\.json

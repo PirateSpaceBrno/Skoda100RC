@@ -1,10 +1,17 @@
-enum headlightsMode {
+enum HeadlightsMode {
   VYPNUTO,
   OBRYSOVA,
   POTKAVACI,
-  DALKOVA
+  DALKOVA,
+  HOUKACKA
 };
 
-void controlBlinkLights(bool left, bool right);
-void controlLights(headlightsMode mode);
+void controlLights();
 void setupLights();
+
+extern HeadlightsMode currentHeadlightsMode;
+extern bool sireneEnabled;
+extern bool flashLeft;
+extern bool flashRight;
+extern bool glowBrake;
+extern bool glowReverse;

@@ -1,0 +1,24 @@
+Circuit: * D:\_projects\skoda100\git\Skoda100RC\obvody\SVETLA.asc
+
+Direct Newton iteration for .op point succeeded.
+Changing Tseed to 1e-008
+Heightened Def Con from 2.6 to 2.6
+Heightened Def Con from 3 to 3
+
+Date: Sat Nov 03 21:25:20 2018
+Total elapsed time: 0.291 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 42945
+traniter = 42925
+tranpoints = 9979
+accept = 7953
+rejected = 2027
+matrix size = 18
+fillins = 8
+solver = Normal
+Matrix Compiler1: 1.51 KB object code size  0.5/0.4/[0.2]
+Matrix Compiler2: off  [0.3]/0.5/0.6
+
