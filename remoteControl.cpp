@@ -4,6 +4,7 @@
 #include "remoteControl.h"
 #include "svetla.h"
 #include "klakson.h"
+#include "motor.h"
 
 // Serial communication variables
 char serialChar;
@@ -60,17 +61,16 @@ void triggerSerialCommand(String command) {
       Serial.println("> SK112 - blinkr pravy zapnut");
       Serial.println("> SK113 - blinkry vystrazne");
       Serial.println(">");
-      //Serial.println("> Motory:");
-      //Serial.println("> -------");
+      Serial.println("> Motory:");
+      Serial.println("> -------");
       //Serial.println("> SK200 - zvuk motoru vypnout");
       //Serial.println("> SK201 - zvuk motoru zapnout");
       //Serial.println("> SK210 - zastavit servomotor rizeni");
       //Serial.println("> SK211 XX - nastavit servomotor rizeni na uhel XX°");
-      //Serial.println("> SK220 - zastavit servomotor pohybu");
-      //Serial.println("> SK221 - otacet servomotor pohybu");
-      //Serial.println("> SK222 - zmenit smer servomotoru pohybu");
-      //Serial.println("> SK223 XX - nastavit rychlost servomotoru pohybu na XX% vykonu");
-      //Serial.println(">");
+      Serial.println("> SK220 - zastavit servomotor pohybu");
+      Serial.println("> SK221 - otacet servomotor pohybu dopredu");
+      Serial.println("> SK222 - otacet servomotor pohybu dozadu");
+      Serial.println(">");
       Serial.println("> Dalsi funkce:");
       Serial.println("> -------------");
       Serial.println("> SK800 - klakson");
@@ -135,6 +135,21 @@ void triggerSerialCommand(String command) {
   else if(command.equalsIgnoreCase("SK113")) {
     flashLeft = true;
     flashRight = true;
+    Serial.println("> OK");
+  }
+
+  else if(command.equalsIgnoreCase("SK220")) {
+    drivingMotorMode = STOP;
+    Serial.println("> OK");
+  }
+
+  else if(command.equalsIgnoreCase("SK221")) {
+    drivingMotorMode = DOPREDU;
+    Serial.println("> OK");
+  }
+
+  else if(command.equalsIgnoreCase("SK222")) {
+    drivingMotorMode = DOZADU;
     Serial.println("> OK");
   }
 

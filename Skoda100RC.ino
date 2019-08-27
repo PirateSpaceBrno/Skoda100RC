@@ -2,6 +2,7 @@
 #include "remoteControl.h"
 #include "svetla.h"
 #include "klakson.h"
+#include "motor.h"
 #include <IRremote.h>
 
 const int RECV_PIN = 7;
@@ -15,6 +16,7 @@ void setup()
   setupLights();
   setupHorn();
   setupSerialCommandLine();
+  //setupMotors();
   
   //IRREmote
   irrecv.enableIRIn();
@@ -33,6 +35,8 @@ void loop()
     // Control sound
     controlHorn();
     controlAlarm();
+
+    //controlDrivingMotor();
   
     // Read commands from serial line
     readSerialCommand();

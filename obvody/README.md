@@ -1,0 +1,1 @@
+K zobrazení schemat použij program DipTrace https://diptrace.com/download/download-diptrace/
